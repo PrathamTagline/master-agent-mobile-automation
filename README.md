@@ -1,4 +1,4 @@
-# Multi-PC Device Manager
+# Master Agent Mobile Automation
 
 Manage and automate multiple Android/Tizen devices across multiple PCs from a single master controller.
 
@@ -6,10 +6,14 @@ Manage and automate multiple Android/Tizen devices across multiple PCs from a si
 
 - ✅ Control multiple PCs from one master PC
 - 📱 List all devices or devices per PC
-- 🎯 Run specific apps on specific PCs
+- 🎯 Run specific apps on specific devices/PCs
 - 📊 Percentage-based app distribution (global & per-PC)
 - 🔄 Automated VPN rotation every 3 hours
 - 📈 Session tracking per device and app
+- 📋 **Real-time log viewing** from master PC
+- ⏹️ **Start/Stop control** for any device/PC
+- 📊 **Session statistics** with detailed per-app breakdown
+- 🎮 **Granular control** - run on all, specific PC, or single device
 
 ## Project Structure
 
@@ -93,24 +97,78 @@ PC_DISTRIBUTION = {
 
 ### Using Makefile Commands (Easiest)
 
+#### List Devices
 ```bash
 # List all devices from all PCs
 make list-all
 
 # List devices from specific PC
 make list PC=PC1
+```
 
-# Run automation on all devices (distributed apps)
+#### Run Automation
+```bash
+# Run on all devices (distributed apps)
 make run-all
 
 # Run specific app on all devices
 make run-all APP=nail_app
 
 # Run on specific PC
-make run-pc1
-make run-pc2 APP=birthday_app
-make run-pc3 APP=fitness_app
+make run-pc PC=PC1
+make run-pc PC=PC2 APP=birthday_app
 
+# Run on specific device
+make run-device PC=PC1 DEVICE=emulator-5554 APP=nail_app
+
+# Shortcuts
+make run-pc1                    # Run on PC1
+make run-pc2 APP=nail_app       # Run nail_app on PC2
+```
+
+#### Stop Automation
+```bash
+# Stop all devices on all PCs
+make stop-all
+
+# Stop all devices on specific PC
+make stop-pc PC=PC1
+make stop-pc2                   # Shortcut
+
+# Stop specific device
+make stop-device PC=PC1 DEVICE=emulator-5554
+```
+
+#### View Logs
+```bash
+# View logs from all PCs
+make logs-all
+make logs-all LINES=200         # Last 200 lines
+
+# View logs from specific PC
+make logs-pc PC=PC1
+make logs-pc1 LINES=100         # Shortcut with custom lines
+
+# View logs from specific device
+make logs-device PC=PC1 DEVICE=emulator-5554
+make logs-device PC=PC1 DEVICE=emulator-5554 LINES=500
+```
+
+#### Session Statistics
+```bash
+# View sessions from all devices
+make sessions-all
+
+# View sessions from specific PC
+make sessions-pc PC=PC1
+make sessions-pc2               # Shortcut
+
+# View sessions from specific device (detailed per-app stats)
+make sessions-device PC=PC1 DEVICE=emulator-5554
+```
+
+#### Configuration
+```bash
 # Show distribution configuration
 make distribution
 
